@@ -4141,21 +4141,7 @@ get_lore_depth_7_9() {
             echo ""
             echo "--------------------------------------------------"
             ;;
-        44) # AI Quotes (Philosophical)
-            # Store ID if not already set (or overwrite for latest event)
-            QUOTE_ID=$idx
-
-            local quote="${AI_QUOTES[$idx]}"
-            local origin="${AI_ORIGINS[$idx]}"
-
-            echo -e "${YELLOW}\"${quote}\"${NC}"
-            echo ""
-            echo "Sentiment: ANALYZING..."
-            echo "Origin:    ${CYAN}$origin${NC}"
-            echo "--------------------------------------------------"
-            read -r -p "Press [ENTER] to save locally..."
-            show_ai_quotes
-            ;;
+        44) show_ai_quotes ;;
         45) # IPv14 (Quantum Entanglement Protocol)
             echo -e "${CYAN}rfc_9999_IPv14_draft.txt${NC}"
             echo "--------------------------------------------------"
@@ -5861,10 +5847,27 @@ game_loop() {
 SKIP_INTRO=0
 SCORE_CODE_INPUT=""
 
+show_help() {
+    echo -e "${CYAN}LUNA SEE${NC} - A Hardcore Shell RPG"
+    echo "Usage: $0 [OPTIONS]"
+    echo ""
+    echo "Options:"
+    echo "  -h, --help    Show this help message and exit"
+    echo "  -s, -SKIP     Skip intro sequence (Fast boot)"
+    echo "  -CODE <code>  Validate score code"
+    echo ""
+    echo "Example:"
+    echo "  $0 -SKIP"
+}
+
 # Parse arguments
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        -s)
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+        -s|-SKIP)
             SKIP_INTRO=1
             shift
             ;;

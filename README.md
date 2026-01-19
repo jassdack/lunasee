@@ -67,6 +67,21 @@ chmod \+x luna\_see.sh
 
 ./luna\_see.sh
 
+### **Usage / 使用法**
+
+Run the game with options:
+オプションを指定してゲームを実行できます:
+
+```bash
+./luna_see.sh [OPTIONS]
+```
+
+| Option | Description |
+| :--- | :--- |
+| `-h, --help` | Show help message / ヘルプを表示 |
+| `-SKIP` | Skip intro sequence / オープニングをスキップ |
+| `-CODE <code>` | Validate score code / スコアコードを検証 |
+
 ## **🎮 How to Play**
 
 You are a Guest User connected to UNSC\_LUNA\_RELAY\_09.
