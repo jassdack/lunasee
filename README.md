@@ -53,7 +53,7 @@ AIによって管理された終末世界を舞台に、プレイヤーは月面
 
 \# Clone the repository
 
-git clone [\[https://github.com/jassdack/luna-see.git\](https://github.com/jassdack/luna-see.git)](https://github.com/jassdack/lunasee)
+git clone https://github.com/jassdack/luna-see.git
 
 \# Move to directory
 
